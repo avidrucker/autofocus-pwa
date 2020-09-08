@@ -1,10 +1,9 @@
 import React from 'react';
+import core from 'fp-autofocus';
 import './App.css';
 
 function App() {
-	let todoList: ITodoItem[] = [];
-	let lastDone: string = "";
-	[todoList, lastDone] = mainWebApp(todoList, lastDone);
+	const myApp: core.IAppData = createBlankAppData();
 
 	const listItems = <ul>{todoList.map(x => <li>{x.header}</li>)}</ul>;
 
