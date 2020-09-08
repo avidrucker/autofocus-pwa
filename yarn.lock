@@ -4690,10 +4690,10 @@ forwarded@~0.1.2:
   resolved "https://registry.yarnpkg.com/forwarded/-/forwarded-0.1.2.tgz#98c23dab1175657b8c0573e8ceccd91b0ff18c84"
   integrity sha1-mMI9qxF1ZXuMBXPozszZGw/xjIQ=
 
-fp-autofocus@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/fp-autofocus/-/fp-autofocus-1.0.0.tgz#bc26b0ab233b48aa94b6ac060f9c1f31ffe44ddd"
-  integrity sha512-ULVA75xTTW8pN2bfIuxyvTo2nkRPFZsmIJw9/xQQxrzodGsBEZib0K7YtMIe/9SZtRbiQkSAv+Xui2voyUhKhQ==
+fp-autofocus@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/fp-autofocus/-/fp-autofocus-1.0.1.tgz#b7a3d71c6946e15f3f9aa77eb9775dfa217ad712"
+  integrity sha512-94HFDfDMAtL9ru5/QeWAj5LgVmiXiOslLUC3FJzB+ktya1Akiw8XKjGgIwdyIGMFy5+K7Evbx3Md6MevdR7dhQ==
 
 fragment-cache@^0.2.1:
   version "0.2.1"
