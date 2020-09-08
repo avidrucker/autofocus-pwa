@@ -14,7 +14,7 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
 		"typescript": "~3.7.2",
-		"fp-autofocus": "^1.0.0"
+		"fp-autofocus": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
