@@ -1,16 +1,17 @@
 import React from 'react';
-import core from 'fp-autofocus';
+import { IAppData, createBlankData } from 'fp-autofocus';
 import './App.css';
 
 function App() {
-	const myApp: core.IAppData = createBlankAppData();
+	const myApp: IAppData = createBlankData();
 
-	const listItems = <ul>{todoList.map(x => <li>{x.header}</li>)}</ul>;
+	const listItems =
+		<ul>{myApp.myList.map(x => <li>{x.textName}</li>)}</ul>;
 
   return (
     <section className="debug">
       <section>{listItems}</section>
-			<section>Last done is {lastDone}</section>
+			<section>Last done is {myApp.lastDone}</section>
     </section>
   );
 }
