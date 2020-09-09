@@ -1,6 +1,7 @@
 # PWA Core MVP
 
 - [x] Import core native API functions (fp-autofocus)
+- [x] Resolve bug: "Module not found: Can't resolve 'fp-autofocus' in '.../autofocus-pwa/src'"
 - [ ] Update components to be purely dynamic
 - [ ] Update project to use core native API (fp-autofocus functions)
 - [ ] Get the project to look according to the visual design spec using Tachyons (dynamic or static import)
