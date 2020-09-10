@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { createBlankData, SIMcreateAndAddNewItem, isNegOne, isReviewableList, isFocusableList, markFirstMarkableIfPossible, IAppData, IItem } from 'fp-autofocus';
+import { createBlankData, SIMcreateAndAddNewItem, isNegOne, 
+	isReviewableList, isFocusableList, markFirstMarkableIfPossible, 
+	IAppData, IItem } from 'fp-autofocus';
 import './index.css';
-import TachyonsHelperAtom from './components2/TachyonsHelperAtom';
+import TachyonsHelperMol from './components2/TachyonsHelperMol';
 import AppHeaderMol from './components2/AppHeaderMol';
 
 function App() {
@@ -59,7 +61,7 @@ function App() {
 
   return (
     <main className="debug">
-			<TachyonsHelperAtom />
+			<TachyonsHelperMol />
 			
 			<section className="measure-narrow center tc">
 
