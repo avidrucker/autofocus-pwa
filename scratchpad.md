@@ -6,12 +6,14 @@ Project Setup
 - [x] Update project to use core native API (fp-autofocus functions)
 
 Functionality
-- [ ] 001 Update project to enable input of new items
-- [ ] 002 Update project to enable changing of screens
+- [x] 001 Update project to enable input of new items
+- [ ] 002 Update project to enable changing of modes/screens
 - [ ] 003 Update components to be purely dynamic
 
 Design
-- [ ] 004 Get the project to look according to the visual design spec using Tachyons (dynamic or static import)
+- [x] 004 Enable Tachyons
+- [x] 005 Enable visual representation of unmarked, marked, completed
+- [ ] 006 Get the project to look according to the visual design spec using Tachyons (dynamic or static import)
 
 # PWA Nice to Haves
 - [ ] 005 Update components to be (as) state-free (as possible) & prop-light
