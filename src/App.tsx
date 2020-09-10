@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { createBlankData, SIMcreateAndAddNewItem, isNegOne, 
 	isReviewableList, isFocusableList, markFirstMarkableIfPossible, 
-	IAppData, IItem } from 'fp-autofocus';
+	IAppData, IItem, SIMenterFocusState } from 'fp-autofocus';
 import './index.css';
 import TachyonsHelperMol from './components2/TachyonsHelperMol';
 import AppHeaderMol from './components2/AppHeaderMol';
@@ -10,12 +10,27 @@ function App() {
 	const [myApp, setMyApp] = useState(createBlankData());
 	const [text, setText] = useState('');
 
+	// a version of markFirstMarkableIfPossible which takes in
+	// app object & returns app object
+	const autoMark = (myApp: IAppData): IAppData =>
+		updateJustAppList
+			(myApp)
+			(markFirstMarkableIfPossible(myApp.myList)(myApp.lastDone));
+
 	function handleTextChange(e: any) {
 		setText(e.target.value);
 	}
 
 	const clearText =  () => {
 		setText('');
+	}
+
+	const conductFocus = (myApp: IAppData) =>
+		SIMenterFocusState(myApp);
+
+	const handleFocusButtonPress = (e: any) => {
+		e.preventDefault();
+		setMyApp(autoMark(conductFocus(myApp)));
 	}
 
 	// TEMP FUNC
@@ -28,14 +43,8 @@ function App() {
 
 	function handleSubmit(e: any) {
 		e.preventDefault();
-		setMyApp(SIMcreateAndAddNewItem(myApp)(text));
 		// TEMP FUNC CALL
-		setMyApp(updateJustAppList
-			(myApp)
-			(markFirstMarkableIfPossible(myApp.myList)(myApp.lastDone))
-		);
-		// TODO: always mark first markable after each item addition
-		// TODO: write a version of markFirstMarkableIfPossible which takes in app object & returns app object
+		setMyApp(autoMark(SIMcreateAndAddNewItem(myApp)(text)));
 		clearText();
 	}
 
@@ -86,7 +95,7 @@ function App() {
 					: <p>List not reviewable.</p>}
 
 				{isFocusableList(myApp)
-					? <button>Focus</button>
+					? <button onClick={handleFocusButtonPress}>Focus</button>
 					: <p>List not focusable.</p>
 				}
 
