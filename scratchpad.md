@@ -7,8 +7,9 @@ Project Setup
 
 Functionality
 - [x] 001 Update project to enable input of new items
-- [ ] 002 Update project to enable changing of modes/screens
-- [ ] 003 Update components to be purely dynamic
+- [ ] 002 Enable user to focus on CMWTD item when it exists
+- [ ] 003 Update project to enable changing of modes/screens
+- [ ] 004 Update components to be purely dynamic
 
 Design
 - [x] 004 Enable Tachyons
