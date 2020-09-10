@@ -1,0 +1,18 @@
+@import "tachyons";
+
+li.unmarked {
+	list-style-type: circle;
+}
+
+li.marked {
+	list-style-type: disc;
+}
+
+li.complete {
+	list-style-type: none;
+	text-decoration:line-through;
+}
+
+.lato {
+	font-family: 'Lato', sans-serif;
+}
