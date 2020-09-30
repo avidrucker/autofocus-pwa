@@ -175,7 +175,8 @@ function App() {
 		</section>;
 
   return (
-    <main className="bg-black vh-100 pv4-ns vw-100 lato f4 border-box">
+    <main className="bg-light-gray vh-100 pv4-ns vw-100 lato f4 border-box">
+			{/* bg-black */}
 			{/*<TachyonsHelperMol />*/}
 			<section className="center tc measure-narrow-ns ph4-ns h-100">
 				{inFocus &&
