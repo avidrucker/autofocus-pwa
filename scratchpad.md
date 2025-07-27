@@ -36,9 +36,9 @@ Functionality ('c' for code)
 - [x] c012 Enable user to click anywhere on screen (or hit enter) to exit "focus mode"
 - [ ] c013 Display options such "show/hide completed", "export to CSV", from menu drop down button
 - [ ] c014 Add checkbox which toggles the hiding of completed items items
-- [ ] c015 Add indicator (a la Svelte 3 intro video) that says how many of how many items are being display (after hide completed is toggled)
-- [ ] c016 Display "about screen" as a tap-dismissable modal on clicking "i" info icon with credits to AF algorithm author, link to author website, and dev/designer website
-- [ ] c017 Update components to be purely dynamic
+- [ ] c015 Add indicator (a la Svelte 3 intro video) that says how many of how many items are being displayed (after hide completed is toggled)
+- [x] c016 Display "about screen" as a tap-dismissable modal on clicking "i" info icon with credits to AF algorithm author, link to author website, and dev/designer website
+- [ ] c017 Update components to be functional state-free components
 
 Design (ui)
 - [x] ui001 Enable Tachyons
@@ -58,10 +58,9 @@ Design (ui)
 - [ ] ui014 Add menu drop down button
 \* Note: Visual design spec is now out of date with current functionality. There is now only one screen which is a dynamic hybrid of all the others.
 
-# PWA Nice to Haves ('e' for extra)
-- [ ] e001 Update components to be (as) state-free (as possible) & prop-light
-- [ ] e002 Update the project to use a more modular, modern library than Tachyons (for theming purposes)
-
 # YAGNI (y)
-- y003 Update the project to leverage i18n & localization
-- 
+- [ ] y003 Update the project to leverage i18n & localization
+
+## Bug Fixes
+- [ ] b001 Resolve bug where, if the list gets too long (a certain number of characters), the app will crash because of the URL encoding length limit - instead, determine this limit and prevent the user from adding items that would exceed this limit w/ a warning message such as "This list cannot be longer than X characters. Please export or copy the items you want to save or create a blank new list."
+- [ ] b002 Resolve bug where the app appears to not work offline on mobile, but it appears to work offline on desktop. This may be a bug with the service worker, or it may be a bug with the way the app is being served on mobile. The bug appears to persist on mobile whether or not the app is run in the DuckDuckGo mobile browser or in the Chrome mobile browser. My best guess at the moment is that the service worker is not being registered correctly on mobile, and/or that the manifest.json is not up to date with the current standards
